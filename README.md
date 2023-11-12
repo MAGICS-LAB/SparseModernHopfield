@@ -1,5 +1,5 @@
 # On Sparse Modern Hopfield Model
-This is the code of the paper [On Sparse Modern Hopfield Model](https://arxiv.org/pdf/2309.12673.pdf). You can use this repo to reproduce the results of our method.
+This is the code of the paper [On Sparse Modern Hopfield Model](https://arxiv.org/pdf/2309.12673.pdf). You can use this repo to reproduce the results in the paper.
 
 ## Citations
 Please consider citing our paper in your publications if it helps. Here is the bibtex:
