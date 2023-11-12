@@ -1,5 +1,5 @@
 # On Sparse Modern Hopfield Model
-This is the code of the paper [On Sparse Modern Hopfield Model](https://arxiv.org/pdf/2309.12673.pdf). You can use this repo to reproduce the results in the paper.
+This is the code of the paper [On Sparse Modern Hopfield Model](https://arxiv.org/pdf/2309.12673.pdf). You can use this repo to reproduce the results of our method.
 
 ## Environmental Setup
 
@@ -13,31 +13,82 @@ $ pip3 install -r requirements.txt
 
 ## Experimental Validation of Theoretical Results
 
-### Dataset Preparation
-
-```bash
-
-```
-
 ### Plotting
 
 ```shell
 $ python3 Plotting.py
 ```
 
-
-
 ## Multiple Instance Learning(MIL) Tasks
 
-### Synthetic Experiments
+### MNIST MIL Experiments
 
-```bash
-$ python3 bit_numerical.py --model <MODEL> --exp <EXP>
+(There might be some potential instability in bit pattern exps so please refer to the MNIST MIL exp for now.)
+
+```shell
+$ python3 mnist_mil_main.py --bag_size <BAG_SIZE>
 ```
 
-Argument options 
-* `model`: pooling, hopfield
-* `exp`: bag_size, sparsity, both
+Bag Size 5 (default setting)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_5.png" width="24%" />
+  <img src="/imgs/test_acc_5.png" width="24%" /> 
+  <img src="/imgs/train_loss_5.png" width="24%" />
+  <img src="/imgs/test_loss_5.png" width="24%" />
+</p>
+</p>
+
+Bag Size 20 (default setting)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_20.png" width="24%" />
+  <img src="/imgs/test_acc_20.png" width="24%" /> 
+  <img src="/imgs/train_loss_20.png" width="24%" />
+  <img src="/imgs/test_loss_20.png" width="24%" />
+</p>
+</p>
+
+Bag Size 30 (default setting)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_30.png" width="24%" />
+  <img src="/imgs/test_acc_30.png" width="24%" /> 
+  <img src="/imgs/train_loss_30.png" width="24%" />
+  <img src="/imgs/test_loss_30.png" width="24%" />
+</p>
+</p>
+
+Bag Size 50 (default setting)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_50.png" width="24%" />
+  <img src="/imgs/test_acc_50.png" width="24%" /> 
+  <img src="/imgs/train_loss_50.png" width="24%" />
+  <img src="/imgs/test_loss_50.png" width="24%" />
+</p>
+</p>
+
+Bag Size 80 (default setting)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_80.png" width="24%" />
+  <img src="/imgs/test_acc_80.png" width="24%" /> 
+  <img src="/imgs/train_loss_80.png" width="24%" />
+  <img src="/imgs/test_loss_80.png" width="24%" />
+</p>
+</p>
+
+Bag Size 100 (dropout = 0.1)
+<p float="left">
+<p align="middle">
+  <img src="/imgs/train_acc_100.png" width="24%" />
+  <img src="/imgs/test_acc_100.png" width="24%" /> 
+  <img src="/imgs/train_loss_100.png" width="24%" />
+  <img src="/imgs/test_loss_100.png" width="24%" />
+</p>
+</p>
+
 
 ### Real-World MIL Tasks
 
@@ -64,7 +115,6 @@ Argument options
 * `gpus_id`: specify which gpus u want to use (e.g. `--gpus_id=0, 1` means cuda:0 and cuda:1 are used for this script)
 
 ## Citations
-
 Please consider citing our paper in your publications if it helps. Here is the bibtex:
 
 ```
