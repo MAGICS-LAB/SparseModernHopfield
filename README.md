@@ -1,6 +1,20 @@
 # On Sparse Modern Hopfield Model
 This is the code of the paper [On Sparse Modern Hopfield Model](https://arxiv.org/pdf/2309.12673.pdf). You can use this repo to reproduce the results of our method.
 
+## Citations
+Please consider citing our paper in your publications if it helps. Here is the bibtex:
+
+```
+@inproceedings{
+  hu2023on,
+  title={On Sparse Modern Hopfield Model},
+  author={Jerry Yao-Chieh Hu and Donglin Yang and Dennis Wu and Chenwei Xu and Bo-Yu Chen and Han Liu},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023},
+  url={https://openreview.net/forum?id=eCgWNU2Imw}
+}
+```
+
 ## Environmental Setup
 
 You can set up the experimental environment by running the following command line:
@@ -114,16 +128,24 @@ Argument options
 * `gpus_per_trial`: how many gpus do u want to use for a single run (set this up carefully for hyperparameter tuning) (no larger than 1)
 * `gpus_id`: specify which gpus u want to use (e.g. `--gpus_id=0, 1` means cuda:0 and cuda:1 are used for this script)
 
-## Citations
-Please consider citing our paper in your publications if it helps. Here is the bibtex:
 
-```
-@inproceedings{
-  hu2023on,
-  title={On Sparse Modern Hopfield Model},
-  author={Jerry Yao-Chieh Hu and Donglin Yang and Dennis Wu and Chenwei Xu and Bo-Yu Chen and Han Liu},
-  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-  year={2023},
-  url={https://openreview.net/forum?id=eCgWNU2Imw}
-}
-```
+## Acknowledgment
+
+The authors would like to thank the anonymous reviewers and program chairs for constructive comments.
+
+JH is partially supported by the Walter P. Murphy Fellowship.
+HL is partially supported by NIH R01LM1372201, NSF CAREER1841569, DOE DE-AC02-07CH11359, DOE LAB 20-2261 and a NSF TRIPODS1740735.
+This research was supported in part through the computational resources and staff contributions provided for the Quest high performance computing facility at Northwestern University which is jointly supported by the Office of the Provost, the Office for Research, and Northwestern University Information Technology.
+The content is solely the responsibility of the authors and does not necessarily represent the official
+views of the funding agencies.
+
+The experiments in this work benefit from the following open-source codes:
+* Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Philipp Seidl, Michael Widrich, Thomas Adler, Lukas Gruber et al. "Hopfield networks is all you need." arXiv preprint arXiv:2008.02217 (2020). https://github.com/ml-jku/hopfield-layers
+* Martins, Andre, and Ramon Astudillo. "From softmax to sparsemax: A sparse model of attention and multi-label classification." In International conference on machine learning, pp. 1614-1623. PMLR, 2016. [add sparsemax source code]
+* Correia, Gonçalo M., Vlad Niculae, and André FT Martins. "Adaptively sparse transformers." arXiv preprint arXiv:1909.00015 (2019). https://github.com/deep-spin/entmax
+* Ilse, Maximilian, Jakub Tomczak, and Max Welling. "Attention-based deep multiple instance learning." In International conference on machine learning, pp. 2127-2136. PMLR, 2018. https://github.com/AMLab-Amsterdam/AttentionDeepMIL
+* Zhang, Yunhao, and Junchi Yan. "Crossformer: Transformer utilizing cross-dimension dependency for multivariate time series forecasting." In The Eleventh International Conference on Learning Representations. 2022. https://github.com/Thinklab-SJTU/Crossformer
+* Millidge, Beren, Tommaso Salvatori, Yuhang Song, Thomas Lukasiewicz, and Rafal Bogacz. "Universal hopfield networks: A general framework for single-shot associative memory models." In International Conference on Machine Learning, pp. 15561-15583. PMLR, 2022. https://github.com/BerenMillidge/Theory_Associative_Memory
+
+
+
