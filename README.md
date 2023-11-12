@@ -149,6 +149,5 @@ The experiments in this work benefit from the following open-source codes:
 
 ### We appreciate the following works for their valuable code and data:
 
-[https://github.com/KrisKorrel/sparsemax-pytorch/blob/master/sparsemax.py]
-[https://github.com/prajjwal1/adaptive_transformer/blob/master/models/entmax.py]
-
+[https://github.com/KrisKorrel/sparsemax-pytorch/blob/master/sparsemax.py] <br>
+[https://github.com/prajjwal1/adaptive_transformer/blob/master/models/entmax.py] <br>
