@@ -119,11 +119,11 @@ Please consider citing our paper in your publications if it helps. Here is the b
 
 ```
 @inproceedings{
-hu2023on,
-title={On Sparse Modern Hopfield Model},
-author={Jerry Yao-Chieh Hu and Donglin Yang and Dennis Wu and Chenwei Xu and Bo-Yu Chen and Han Liu},
-booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-year={2023},
-url={https://openreview.net/forum?id=eCgWNU2Imw}
+  hu2023on,
+  title={On Sparse Modern Hopfield Model},
+  author={Jerry Yao-Chieh Hu and Donglin Yang and Dennis Wu and Chenwei Xu and Bo-Yu Chen and Han Liu},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023},
+  url={https://openreview.net/forum?id=eCgWNU2Imw}
 }
 ```
