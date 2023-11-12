@@ -147,5 +147,8 @@ The experiments in this work benefit from the following open-source codes:
 * Zhang, Yunhao, and Junchi Yan. "Crossformer: Transformer utilizing cross-dimension dependency for multivariate time series forecasting." In The Eleventh International Conference on Learning Representations. 2022. https://github.com/Thinklab-SJTU/Crossformer
 * Millidge, Beren, Tommaso Salvatori, Yuhang Song, Thomas Lukasiewicz, and Rafal Bogacz. "Universal hopfield networks: A general framework for single-shot associative memory models." In International Conference on Machine Learning, pp. 15561-15583. PMLR, 2022. https://github.com/BerenMillidge/Theory_Associative_Memory
 
+### We appreciate the following works for their valuable code and data:
 
+[https://github.com/KrisKorrel/sparsemax-pytorch/blob/master/sparsemax.py]
+[https://github.com/prajjwal1/adaptive_transformer/blob/master/models/entmax.py]
 
