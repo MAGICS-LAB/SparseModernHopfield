@@ -7,7 +7,7 @@ import math
 from math import sqrt
 from utils.sparse_max import Sparsemax
 from utils.entmax import Entmax15
-
+from utils.general_entmax import EntmaxAlpha
 
 class FullAttention(nn.Module):
     '''
@@ -101,6 +101,8 @@ class HopfieldCore(nn.Module):
             self.softmax = Sparsemax(dim=-1)
         elif mode == 'entmax':
             self.softmax = Entmax15(dim=-1)
+        elif mode == 'gsh':
+            self.softmax = EntmaxAlpha(dim=-1)
         else:
             self.softmax = nn.Softmax(dim=-1)
 
@@ -274,7 +276,7 @@ class HopfieldLayer(nn.Module):
 
         self.ln = nn.LayerNorm(d_model, elementwise_affine=False)
 
-        if mode in ["sparsemax", "softmax", "entmax"]:
+        if mode in ["sparsemax", "softmax", "entmax", "gsh"]:
             self.inner_attention = HopfieldCore(
                 scale=scale, attention_dropout=dropout, mode=mode, norm=True)
 

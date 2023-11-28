@@ -43,8 +43,7 @@ class Trainer:
 
     def _get_model(self):
 
-        model = MNISTModel(input_size=self.config["input_size"],
-                            d_model=self.config["d_model"],
+        model = CIFARModel(d_model=self.config["d_model"],
                             n_heads=self.config["n_heads"], 
                             update_steps=self.config["update_steps"], 
                             dropout=self.config["dropout"],
@@ -55,7 +54,7 @@ class Trainer:
         return model.cuda()
 
     def _get_opt(self):
-        return torch.optim.AdamW(self.model.parameters(), lr=self.config["lr"])
+        return torch.optim.AdamW(self.model.parameters(), lr=self.config["lr"], weight_decay=0.001)
 
     def _get_cri(self):
         return torch.nn.BCEWithLogitsLoss()
