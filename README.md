@@ -25,6 +25,53 @@ $ conda activate sparse_hopfield
 $ pip3 install -r requirements.txt
 ```
 
+## Examples
+
+In ```layers.py```, we have implemented the general sparse Hopfield, dense Hopfield and sparse Hopfield.
+To use it, see below
+
+```python
+dense_hp = HopfieldPooling(
+    d_model=d_model,
+    n_heads=n_heads,
+    mix=True,
+    update_steps=update_steps,
+    dropout=dropout,
+    mode="softmax",
+    scale=scale,
+    num_pattern=num_pattern) # Dense Hopfield
+
+sparse_hp = HopfieldPooling(
+    d_model=d_model,
+    n_heads=n_heads,
+    mix=True,
+    update_steps=update_steps,
+    dropout=dropout,
+    mode="sparsemax",
+    scale=scale,
+    num_pattern=num_pattern) # Sparse Hopfield
+
+entmax_hp = HopfieldPooling(
+    d_model=d_model,
+    n_heads=n_heads,
+    mix=True,
+    update_steps=update_steps,
+    dropout=dropout,
+    mode="entmax",
+    scale=scale,
+    num_pattern=num_pattern) # Hopfield with Entmax-15
+
+gsh_hp = HopfieldPooling(
+    d_model=d_model,
+    n_heads=n_heads,
+    mix=True,
+    update_steps=update_steps,
+    dropout=dropout,
+    mode="gsh",
+    scale=scale,
+    num_pattern=num_pattern) # Generalized Sparse Hopfield with learnable alpha
+```
+
 ## Experimental Validation of Theoretical Results
 
 ### Plotting
