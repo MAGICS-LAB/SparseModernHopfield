@@ -219,6 +219,7 @@ def train(config, args, train_features, train_labels, testset):
         val_loss, val_acc, val_auc = eval_iter(net, valloader, device)
         if best_auc<val_auc:
             test_loss, test_acc, test_auc = eval_iter(net, testloader, device)
+            best_auc = val_auc
         if early_stopper.early_stop(val_auc):
             break
     session.report({"auc": early_stopper.max_validation_loss, "test_auc": test_auc})
